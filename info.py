@@ -22,10 +22,10 @@ def is_enabled(value, default):
 
 
 # Bot information
-SESSION = environ.get("SESSION", "Media_search")
+SESSION = environ.get("SESSION", "Channelmartbot")
 API_ID = int(environ.get("API_ID", "21748181"))
 API_HASH = environ.get("API_HASH", "b1d962414e186e0778911f3183feac33")
-BOT_TOKEN = environ.get("BOT_TOKEN", "6564513574:AAF1dwXAmMGbLFEIyb_eHGow9Q_561bWf2U")
+BOT_TOKEN = environ.get("BOT_TOKEN", "6995386592:AAHzUP3kbSlxKNawKiVieJ8PHqZEzYavRmA")
 
 # Bot settings
 CACHE_TIME = int(environ.get("CACHE_TIME", 300))
@@ -37,11 +37,11 @@ PICS = (
 # Admins, Channels & Users
 ADMINS = [
     int(admin) if id_pattern.search(admin) else admin
-    for admin in environ.get("ADMINS", "6168162777").split()
+    for admin in environ.get("ADMINS", "1980321098").split()
 ]
 CHANNELS = [
     int(ch) if id_pattern.search(ch) else ch
-    for ch in environ.get("CHANNELS", "-1001722984461").split()
+    for ch in environ.get("CHANNELS", "-1002193824799").split()
 ]
 auth_users = [
     int(user) if id_pattern.search(user) else user
@@ -67,13 +67,13 @@ AUTH_CHANNEL = (
 # Set to False inside the bracket if you don't want to use Request Channel else set it to Channel ID
 REQ_CHANNELS = [
     int(ch) if id_pattern.search(ch) else ch
-    for ch in environ.get("REQ_CHANNEL", "-1001935365147").split()
+    for ch in environ.get("REQ_CHANNEL", "-1002193824799").split()
 ]  # Example: REQ_CHANNELS = -10023 -10024 -10025
 REQ_CHANNEL = REQ_CHANNELS
 JOIN_REQS_DB = environ.get("JOIN_REQS_DB", DATABASE_URI)
 
 # Others
-LOG_CHANNEL = int(environ.get("LOG_CHANNEL", "-1001623633000"))
+LOG_CHANNEL = int(environ.get("LOG_CHANNEL", "-1002193824799"))
 SUPPORT_CHAT = environ.get("SUPPORT_CHAT", "VJ_Bot_Disscussion")
 P_TTI_SHOW_OFF = is_enabled((environ.get("P_TTI_SHOW_OFF", "True")), False)
 IMDB = is_enabled((environ.get("IMDB", "False")), True)
