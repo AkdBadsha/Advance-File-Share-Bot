@@ -53,8 +53,7 @@ AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
 DATABASE_URI = environ.get(
-    "DATABASE_URI",
-    "mongodb+srv://Med:Pass@cluster0.efplpyu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+    "DATABASE_URI","")
 )
 DATABASE_NAME = environ.get("DATABASE_NAME", "Cluster0")
 COLLECTION_NAME = environ.get("COLLECTION_NAME", "Telegram_files")
@@ -67,13 +66,13 @@ AUTH_CHANNEL = (
 # Set to False inside the bracket if you don't want to use Request Channel else set it to Channel ID
 REQ_CHANNELS = [
     int(ch) if id_pattern.search(ch) else ch
-    for ch in environ.get("REQ_CHANNEL", "-1002193824799").split()
+    for ch in environ.get("REQ_CHANNEL", "").split()
 ]  # Example: REQ_CHANNELS = -10023 -10024 -10025
 REQ_CHANNEL = REQ_CHANNELS
 JOIN_REQS_DB = environ.get("JOIN_REQS_DB", DATABASE_URI)
 
 # Others
-LOG_CHANNEL = int(environ.get("LOG_CHANNEL", "-1002193824799"))
+LOG_CHANNEL = int(environ.get("LOG_CHANNEL", ""))
 SUPPORT_CHAT = environ.get("SUPPORT_CHAT", "VJ_Bot_Disscussion")
 P_TTI_SHOW_OFF = is_enabled((environ.get("P_TTI_SHOW_OFF", "True")), False)
 IMDB = is_enabled((environ.get("IMDB", "False")), True)
