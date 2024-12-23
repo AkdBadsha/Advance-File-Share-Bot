@@ -72,6 +72,9 @@ REQ_CHANNEL = REQ_CHANNELS
 JOIN_REQS_DB = environ.get("JOIN_REQS_DB", DATABASE_URI)
 
 # Others
+PORT = int(environ.get("PORT", "8000"))
+WEB_SERVER = is_enabled((environ.get("WEB_SERVER", "False")), False)
+
 LOG_CHANNEL = int(environ.get("LOG_CHANNEL", ""))
 SUPPORT_CHAT = environ.get("SUPPORT_CHAT", "VJ_Bot_Disscussion")
 P_TTI_SHOW_OFF = is_enabled((environ.get("P_TTI_SHOW_OFF", "True")), False)
