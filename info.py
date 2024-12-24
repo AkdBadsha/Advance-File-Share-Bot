@@ -52,8 +52,7 @@ auth_grp = environ.get("AUTH_GROUP")
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = environ.get(
-    "DATABASE_URI","")
+DATABASE_URI = environ.get("DATABASE_URI", "")
 
 DATABASE_NAME = environ.get("DATABASE_NAME", "Cluster0")
 COLLECTION_NAME = environ.get("COLLECTION_NAME", "Telegram_files")
@@ -69,7 +68,7 @@ REQ_CHANNELS = [
     for ch in environ.get("REQ_CHANNEL", "").split()
 ]  # Example: REQ_CHANNELS = -10023 -10024 -10025
 REQ_CHANNEL = REQ_CHANNELS
-JOIN_REQS_DB = environ.get("JOIN_REQS_DB", DATABASE_URI)
+JOIN_REQS_DB = DATABASE_URI
 
 # Others
 PORT = int(environ.get("PORT", "8000"))

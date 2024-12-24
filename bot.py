@@ -98,10 +98,13 @@ class Bot(Client):
 
 app = Bot()
 
+
 async def main():
     await app.start()
     await idle()
     await app.stop()
 
+
 if __name__ == "__main__":
     app.run(main())
+    # app.run()

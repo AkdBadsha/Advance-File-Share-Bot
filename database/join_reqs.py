@@ -3,21 +3,16 @@
 # (c) @AlbertEinsteinTG
 
 import motor.motor_asyncio
+from info import JOIN_REQS_DB
 
 
 class JoinReqs:
 
     def __init__(self):
-        from info import JOIN_REQS_DB
 
-        if JOIN_REQS_DB:
-            self.client = motor.motor_asyncio.AsyncIOMotorClient(JOIN_REQS_DB)
-            self.db = self.client["JoinReqs"]
-            self.col = self.db["join_reqs"]
-        else:
-            self.client = None
-            self.db = None
-            self.col = None
+        self.client = motor.motor_asyncio.AsyncIOMotorClient(JOIN_REQS_DB)
+        self.db = self.client["JoinReqs"]
+        self.col = self.db["join_reqs"]
 
     def isActive(self):
         if self.client is not None:

@@ -15,7 +15,7 @@ from logging import getLogger
 logger = getLogger(__name__)
 INVITE_LINK = {}
 CHANNEL_TITLES = {}
-db = JoinReqs
+db = JoinReqs()
 
 
 async def ForceSub(bot: Client, update: Message, file_id: str = False, mode="checksub"):
@@ -67,10 +67,10 @@ async def ForceSub(bot: Client, update: Message, file_id: str = False, mode="che
         return False
 
     # Main Logic
-    if REQ_CHANNEL and db().isActive():
+    if REQ_CHANNEL and db.isActive():
         try:
             # Check if User is Requested to Join Channels
-            user = await db().is_user_joined_all(update.from_user.id, REQ_CHANNEL)
+            user = await db.is_user_joined_all(update.from_user.id, REQ_CHANNEL)
             if user:
                 return True
         except Exception as e:
