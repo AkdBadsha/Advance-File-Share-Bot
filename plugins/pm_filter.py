@@ -97,12 +97,12 @@ async def next_page(bot, query):
     elif off_set is None:
         btn.insert(0,
             [
-                InlineKeyboardButton("Updates", url="https://t.me/VJ_Botz"),
+                InlineKeyboardButton("Updates", url="https://t.me/+2tM9BkgKiGcxZTk9"),
             ]
         )
         btn.insert(1,
             [
-                InlineKeyboardButton("🍿 YouTube Channel 🍿", url="https://youtube.com/@Tech_VJ"),
+                InlineKeyboardButton("Backup Channel", url="https://t.me/+nRck2qunYLYxZjQ1"),
             ]
         )
         btn.append(
@@ -144,7 +144,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit("<b>📍 Movie Not available Reasons\n\n<i>1) O.T.T Or DVD Not Released\n\n2) Type Name With Year</i> \n\n3) Movie Is Not Available in the database Say In Our Other Group To Get This Movies\n\n<a href='https://t.me/Group_Linkzzzz'>Our Groups</a></b>")
+            k = await query.message.edit("<b>📍 Movie Not available Reasons\n\n<i>1) O.T.T Or DVD Not Released\n\n2) Type Name With Year</i> \n\n3) Movie Is Not Available in the database Say In Our Other Group To Get This Movies\n\n<a href='https://t.me/+2tM9BkgKiGcxZTk9'>Our Groups</a></b>")
             await asyncio.sleep(10)
             await k.delete()
 
@@ -413,12 +413,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('💝 Subscribe YouTube Channel 💗', url=f'http://youtube.com/@Tech_VJ')
+            InlineKeyboardButton('Main Channel', url=f'https://t.me/+2tM9BkgKiGcxZTk9')
             ],[
-            InlineKeyboardButton('♻️ Update Channel ♻️', url=f'https://t.me/VJ_Botz')
-            ],[
-            InlineKeyboardButton('ℹ️ Owner', url=f't.me/vjbots_bot'),
-            InlineKeyboardButton('😊 About', callback_data='about')
+            InlineKeyboardButton('♻️ Backup Channel ♻️', url=f'https://t.me/+nRck2qunYLYxZjQ1')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
