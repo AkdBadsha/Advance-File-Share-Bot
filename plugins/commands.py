@@ -35,9 +35,9 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton("Updates", url="https://t.me/VJ_Bots"),
+                InlineKeyboardButton("Updates", url="https://t.me/+2tM9BkgKiGcxZTk9"),
                 InlineKeyboardButton(
-                    "🍿 YouTube Channel 🍿", url="https://youtube.com/@Tech_VJ"
+                    "Backup Channel", url="https://t.me/+nRck2qunYLYxZjQ1"
                 ),
             ]
         ]
@@ -73,14 +73,14 @@ async def start(client, message):
         buttons = [
             [
                 InlineKeyboardButton(
-                    "💝 Subscribe YouTube Channel 💗",
-                    url=f"http://youtube.com/@Tech_VJ",
+                    "Main Channel",
+                    url=f"https://t.me/+2tM9BkgKiGcxZTk9",
                 )
             ],
-            [InlineKeyboardButton("♻️ Update Channel ♻️", url=f"https://t.me/VJ_Botz")],
+            [InlineKeyboardButton("♻️ Backup Channel ♻️", url=f"https://t.me/+nRck2qunYLYxZjQ1")],
             [
-                InlineKeyboardButton("ℹ️ Owner", url=f"t.me/vjbots_bot"),
-                InlineKeyboardButton("😊 About", callback_data="about"),
+                InlineKeyboardButton("ℹ️ Owner", url=f"https://t.me/+2tM9BkgKiGcxZTk9"),
+                InlineKeyboardButton("😊 More", url=f"https://t.me/+nRck2qunYLYxZjQ1"),
             ],
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -109,14 +109,14 @@ async def start(client, message):
         buttons = [
             [
                 InlineKeyboardButton(
-                    "💝 Subscribe YouTube Channel 💗",
-                    url=f"http://youtube.com/@Tech_VJ",
+                    "Main Channel",
+                    url=f"https://t.me/+2tM9BkgKiGcxZTk9",
                 )
             ],
-            [InlineKeyboardButton("♻️ Update Channel ♻️", url=f"https://t.me/VJ_Botz")],
+            [InlineKeyboardButton("Backup Channel", url=f"https://t.me/+nRck2qunYLYxZjQ1")],
             [
-                InlineKeyboardButton("ℹ️ Owner", url=f"t.me/vjbots_bot"),
-                InlineKeyboardButton("😊 About", callback_data="about"),
+                InlineKeyboardButton("ℹ️ Owner", url=f"t.me/+2tM9BkgKiGcxZTk9"),
+                InlineKeyboardButton("😊 About", url=f"https://t.me/+nRck2qunYLYxZjQ1"),
             ],
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
